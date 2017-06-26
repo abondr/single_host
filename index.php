@@ -4,22 +4,15 @@ include_once 'common_pages/head.php';
 include_once 'common_pages/navBar.php';
 ?>
 <div class="container">
+    <?php include_once 'common_pages/leftNavBar.php';?>
     <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="col-md-12 text-right">Endurence Test time left :- <span id="clock"></span></div>
         <h1>Abons Practice page</h1>
         <Div class="text-info h3">this is my practice page where i tinker around what ever i can get my hand on. be it php,mysql,jquery,angular etc,anything[and they have to be free]</div>
     </div>
 </div> <!-- /container -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li><a href="/basic-page01.php">Basic Crud 01</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+
 <?php include_once 'common_pages/footer01.php'; ?>
 <!-- Bootstrap core JavaScript
 ================================================== -->
