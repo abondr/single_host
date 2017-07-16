@@ -185,7 +185,7 @@ try {
     function editStudent(std_id) {
         $.ajax({
             type: "POST",
-            url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic01_actions.php",
+            url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic02_actions.php",
             data: {'std_id': std_id, 'action': 'getStudent'},
             success: function (studentJson)
             {
@@ -206,7 +206,7 @@ try {
                 "Confirm": function () {
                     $.ajax({
                         type: "POST",
-                        url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic01_actions.php",
+                        url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic02_actions.php",
                         data: {'std_id': std_id, 'action': 'delStudent'},
                         success: function (result) {
                             var updatedRow = $.parseJSON(result);
@@ -300,7 +300,7 @@ try {
                 $('.loading').show();
                 $.ajax({
                     type: "POST",
-                    url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic01_actions.php",
+                    url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic02_actions.php",
                     data: $('#addStudentFrm').serialize(),
                     success: function (result)
                     {
@@ -345,7 +345,7 @@ try {
                 $('.loading').show();
                 $.ajax({
                     type: "POST",
-                    url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic01_actions.php",
+                    url: "http://<?= $_SERVER['SERVER_NAME'] ?>/basic02_actions.php",
                     data: $('#editStudentFrm').serialize(),
                     success: function (result)
                     {
