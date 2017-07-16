@@ -13,24 +13,22 @@ include_once 'common_pages/navBar.php';
     </div>
 </div> <!-- /container -->
 
-<?php include_once 'common_pages/footer01.php'; ?>
+<?php include_once 'common_pages/footer01.php'; 
+    $dateJoining = new DateTime("2017-06-12 10:00:00");
+    $dateEnd = $dateJoining->add(new DateInterval("P2Y"));
+?>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
-<script>window.jQuery || document.write('<script src="_assets/_javaScript/jquery.min.js"><\/script>')</script>
+<script src="_assets/_javaScript/jquery.min.js"><\/script>
 <script src="_assets/_javaScript/bootstrap.min.js"></script>
 <script src="_assets/_javaScript/jquery.countdown.min.js"></script>
 <script type="text/javascript">
-    var date = new Date("<?= date('Y-m-d H:i:s', strtotime('+2 years', strtotime("2017-06-12 10:00:00"))); ?>");
-    $('#clock').countdown(date, function (event) {
+    var countDownDate = new Date("<?= $dateEnd->format("Y-m-d H:I:s"); ?>").getTime();
+    $('#clock').countdown(countDownDate, function (event) {
         var year = event.offset.years - 1;
-        var month = event.offset.months - (year * 12);
-        var day = event.offset.days;
-        var hour = event.offset.hours;
-        var minute = event.offset.minutes;
-        var second = event.offset.seconds;
-        $(this).html(year + " year " + month + " month " + day + " day ," + hour + " : " + minute + " : " + second + " hours");
+        var month = event.offset.months - (year * 12);                
+        $(this).html(year+" year "+month+" month "+event.strftime(' %-d days %-H : %-M : %-S Hours'));
     });
 </script>
 </body>

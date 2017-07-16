@@ -12,7 +12,10 @@
         <title><?= $pageTitle ?></title>
         <!-- Bootstrap core CSS -->
         <link href="_assets/_styleSheet/bootstrap.min.css" rel="stylesheet">
+        <!-- jquery-ui core CSS -->
+        <link href="_assets/_styleSheet/jquery-ui.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="_assets/_styleSheet/_custom01.css" rel="stylesheet">
     </head>
     <body>
+        <div class="loading" ></div>

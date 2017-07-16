@@ -40,8 +40,105 @@ body > .container {
     padding-right: 15px;
     padding-left: 15px;
 }
-
 code {
     font-size: 80%;
 }
+.btn-close {
+    color: #000;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #fff;
+}
+ul.li-table{
+	margin:0px;
+	padding:0px;
+}
+ul.li-table li{
+	background: #f3f3f3 none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    float: left;
+    font-size: 12px;
+    margin: 0;
+    max-width: 16.5%;
+    min-height: 62px;
+    padding: 10px 11px;
+    text-align: center;
+    word-break: break-all;
+}
+ul.li-table li strong{
+	font-size:13px;
+}
+.modal-body.padding-none{
+	padding:0;
+}
+.form-group.custom-form-group{
+	overflow-y:scroll;
+}
+ul.li-table li.amount{
+	width:13%;
+}
+ul.li-table li.serial-num{
+	width:11%;
+}
+ul.li-table li.custom-date{
+	max-width:19%;
+}
+ul.li-table li.vendor-name{
+	max-width:23%;
+}
+ul.li-table li.city{
+	font-size:10px;
+}
+ul.li-table li.order-id{
+	max-width:16%;
+}
+.alert-danger span {
+    background-position: 0 -44px;
+    display: block;
+    height: 19px;
+    left: 15px;
+    margin-top: -11.5px;
+    position: absolute;
+    top: 50%;
+    width: 21px;
+}
+.alert_wrap {
+	position:relative;
+}
+.alert_wrap span {
+	background-color: #fefccb;
+	color: #c7254e;
+	display: none;
+	font-size: 10px;
+	left: 36px;
+	padding: 3px 5px 2px;
+	position: absolute;
+	top: 0;
+	width: 95px;
+}
+
+.flw100>.form-group>.error{
+    color: #c7254e;
+    font-size: 25px;
+}
+.loading {
+    background-color: #fff;
+    background-image: url(../_images/loading.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    display: none;
+    height: auto;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: 2147483647;
+}
+
 
