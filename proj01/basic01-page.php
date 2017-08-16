@@ -13,7 +13,7 @@ try {
 }
 ?>
 <div class="container-fluid">
-        <?php include_once 'common_pages/leftNavBar.php'; ?>
+        <?php include_once '../common_pages/leftNavBar.php'; ?>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1>Basic Pdo page01</h1>
             <Div class="text-info h3">Basic PDO testing page.</div>
@@ -47,12 +47,6 @@ try {
         </div>
 </div>
 <?php include_once 'common_pages/footer01.php'; ?>
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
-<script>window.jQuery || document.write('<script src="_assets/_javaScript/jquery.min.js"><\/script>')</script>
-<script src="_assets/_javaScript/bootstrap.min.js"></script>
-<script src="_assets/_javaScript/jquery.countdown.min.js"></script>
+<?php include_once 'common_pages/commonScript01.php';?>
 </body>
 </html>

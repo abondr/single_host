@@ -1,6 +1,6 @@
 <?php
 
-include 'configs/DatabaseCredential01.php';
+include '../configs/DatabaseCredential01.php';
 
 /**
  * db connection class using singleton pattern

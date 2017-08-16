@@ -3,7 +3,7 @@ $pageTitle = "Abons Pages";
 include_once 'common_pages/head.php';
 include_once 'common_pages/navBar.php';
 ?>
-<div class="container">
+<div class="container-fluid">
     <?php include_once 'common_pages/leftNavBar.php';?>
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -24,11 +24,16 @@ include_once 'common_pages/navBar.php';
 <script src="_assets/_javaScript/bootstrap.min.js"></script>
 <script src="_assets/_javaScript/jquery.countdown.min.js"></script>
 <script type="text/javascript">
-    var countDownDate = new Date("<?= $dateEnd->format("Y-m-d H:I:s"); ?>").getTime();
+    var countDownDate = new Date("<?= $dateEnd->format("Y-m-d H:I:s"); ?>").getTime();    
     $('#clock').countdown(countDownDate, function (event) {
+        var dateTxt = "";
         var year = event.offset.years - 1;
-        var month = event.offset.months - (year * 12);                
-        $(this).html(year+" year "+month+" month "+event.strftime(' %-d days %-H : %-M : %-S Hours'));
+        var month = event.offset.months - (year * 12);    
+        var day = event.offset.daysToMonth;
+        if(year > 0){       dateTxt += year+" year ";        }
+        if(month > 0){      dateTxt += month+" month ";      }
+        if(day > 0){        dateTxt += day+" days ";         }
+        $(this).html(dateTxt+event.strftime('%-H : %-M : %-S Hours'));
     });
 </script>
 </body>
