@@ -18,7 +18,6 @@ include_once 'common_pages/navBar.php';
     $joinDate = "2017-06-12 10:00:00";
     $dateJoining = new DateTime($joinDate);
     $dateEnd = $dateJoining->add(new DateInterval("P2Y"));
-    echo strtotime($joinDate,time());
 ?>
 <!-- Bootstrap core JavaScript
 ================================================== -->

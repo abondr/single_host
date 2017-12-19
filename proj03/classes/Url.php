@@ -1,9 +1,7 @@
 <?php
-
-class Url{
+class Url {
     public static $_folder = PAGES_DIR;
     public static $_page= "page";
-    
     public static function getPage(){
         $page = self::$_folder.DS.self::cPage().".php";
         $error = self::$_folder.DS."error.php";

@@ -1,15 +1,15 @@
 <?php
 
 if ($_SERVER['REMOTE_ADDR'] == "127.0.0.1") {
-    $databaseName = "zero_host";
-    $username = "root";
-    $password = "system";
-    $hostName = "localhost";
-    $dsn = "mysql:dbname=" . $databaseName;
+    defined("DATA_BASE_NAME") || define("DATA_BASE_NAME", "zero_host");
+    defined("USER_NAME") || define("USER_NAME", "root");
+    defined("PASSWORD") || define("PASSWORD", "system");
+    defined("HOST_NAME") || define("HOST_NAME", "localhost");
 } else {
-    $databaseName = "u287175439_db01";
-    $username = "u287175439_root";
-    $password = "abondr@1984";
-    $hostName = "mysql.hostinger.in";
+    defined("DATA_BASE_NAME") || define("DATA_BASE_NAME", "u287175439_db01");
+    defined("USER_NAME") || define("USER_NAME", "u287175439_root");
+    defined("PASSWORD") || define("PASSWORD", "abondr@1984");
+    defined("HOST_NAME") || define("HOST_NAME", "mysql.hostinger.in");
+    
 }
-$dsn = "mysql:host={$hostName};dbname={$databaseName};";
+$dsn = "mysql:host=".HOST_NAME.";dbname=".DATA_BASE_NAME.";";

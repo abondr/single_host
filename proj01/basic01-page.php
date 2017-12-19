@@ -4,7 +4,7 @@ include_once 'common_pages/head.php';
 include_once 'common_pages/navBar.php';
 include_once 'class.Database01.php';
 try {
-    $conn = Database01::getConnection();
+        $conn = Database01::getConnection();
     $statement = $conn->query("SELECT s.roll, s.fname, s.lname, c.cls_name "
             . "FROM p1_student AS s "
             . "JOIN p1_class AS c ON s.cls_id = c.cls_id");

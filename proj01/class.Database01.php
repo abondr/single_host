@@ -31,7 +31,7 @@ class Database01 {
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         ];
         // assign PDO object to db variable
-            self::$db = new PDO($dsn, $username, $password,$default_options);
+            self::$db = new PDO($dsn, USER_NAME, PASSWORD,$default_options);
            // self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             //Output error - would normally log this to error file rather than output to user.
